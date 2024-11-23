@@ -1,0 +1,24 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    /* Fondo degradado estelar */
+    .bg-space {
+      background: radial-gradient(circle at bottom, #001220, #000000);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Estrellas */
+    .bg-space::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(white 1px, transparent 1px);
+      background-size: 3px 3px;
+      opacity: 0.2;
+      z-index: 0;
+    }
